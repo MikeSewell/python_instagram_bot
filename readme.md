@@ -9,7 +9,7 @@
 -->
 [![Stargazers][stars-shield]][stars-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Instagram][instagram-shield][instagram-url]
+[![Instagram][instagram-shield]][instagram-url]
 
 
 
