@@ -62,7 +62,7 @@ Project Link: [https://github.com/MikeSewell/python_instagram_bot](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/MikeSewell/python_instagram_bot.svg?style=flat-square
 [stars-url]: https://github.com/MikeSewell/python_instagram_bot/stargazers
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mikesewell-
