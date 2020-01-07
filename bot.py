@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from random import randint
+from login_info import username, password
 
 class InstaBot:
     def __init__(self, username, pw):
@@ -38,11 +39,10 @@ class InstaBot:
             sleep(randint(1,6))
             self.driver.find_element_by_xpath("//a[contains(text(), 'Next')]").click()
             sleep(1)
-            current_like += 1
-    
+            current_like += 1  
 
 
 
-my_bot = InstaBot('mykedamastermind','nZ1kIqanstYxGVhbvmn')
+my_bot = InstaBot(username,password)
 my_bot.search_query("#vigia")
 my_bot.like_images(5)
