@@ -52,7 +52,7 @@ class InstaBot:
     def like_images(self,likes):
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[1]/div/div/div[1]/div[1]/a/div/div[2]").click()
         sleep(2)
-        current_like = 0
+        current_like = 1
         while current_like <= likes:
             sleep(randint(1,6))
             self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button").click()
@@ -65,6 +65,6 @@ class InstaBot:
 
 
 my_bot = InstaBot(username,password)
-my_bot.search_query("#time")
-# my_bot.like_images(72)
-my_bot.comment("Only in the time hashtag!! ",2)
+my_bot.search_query("#medellincity")
+my_bot.like_images(53)
+# my_bot.comment("Only in the time hashtag!! ",2)
