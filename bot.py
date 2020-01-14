@@ -30,19 +30,41 @@ class InstaBot:
         self.driver.find_element_by_xpath('/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input').send_keys(Keys.ENTER)
         sleep(5)
 
+    def comment(self,comment,cm_number):
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[1]/div/div/div[1]/div[1]/a/div/div[2]").click()
+        sleep(2)
+        current_user = 0
+        while current_user <= cm_number:
+            username = self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/header/div[2]/div[1]/div[1]/h2/a").text
+            sleep(randint(1,6))
+            print(comment + " @"+ username)
+            # add if for more than one comment
+            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea").click()
+            sleep(randint(1,6))
+            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea").send_keys(comment)
+            sleep(randint(1,6))
+            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea").send_keys(Keys.ENTER)
+            sleep(randint(1,6))
+            self.driver.find_element_by_xpath("//a[contains(text(), 'Next')]").click()
+            sleep(2)
+            current_user += 1 
+
     def like_images(self,likes):
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[1]/div/div/div[1]/div[1]/a/div/div[2]").click()
         sleep(2)
         current_like = 0
         while current_like <= likes:
+            sleep(randint(1,6))
             self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button").click()
             sleep(randint(1,6))
             self.driver.find_element_by_xpath("//a[contains(text(), 'Next')]").click()
             sleep(1)
-            current_like += 1  
+            current_like += 1 
+            print("like number : ",current_like)
 
 
 
 my_bot = InstaBot(username,password)
-my_bot.search_query("#vigia")
-my_bot.like_images(5)
+my_bot.search_query("#time")
+# my_bot.like_images(72)
+my_bot.comment("Only in the time hashtag!! ",2)
